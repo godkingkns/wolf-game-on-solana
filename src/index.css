@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'BrokenConsoleBold';
+  src: url('./assets/fonts/BrokenConsoleBold.ttf');
+}
+
+@font-face {
+  font-family: 'PixelCraft';
+  src: url('./assets/fonts/PIXELCRAFT.ttf');
+}
+
+.font-console {
+  font-family: 'BrokenConsoleBold', serif;
+}
+
+.font-pixel {
+  font-family: 'PixelCraft', serif;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.text-outline {
+  text-shadow:
+    1.6px 1.6px 0 #000,
+    -1.6px -1.6px 0 #000,
+    1.6px -1.6px 0 #000,
+    -1.6px 1.6px 0 #000,
+    1.6px 1.6px 0 #000;
+}
+
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: var(--form-background);
+  /* Not removed via appearance */
+  margin: 0;
+
+  font: inherit;
+  color: white;
+  width: 14px;
+  height: 14px;
+  border: 1px solid currentColor;
+  border-radius: 100%;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: center center;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em white;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+#staked::-webkit-scrollbar-track
+{
+	background-color: #7B2E2E;
+  border-radius: 10px;
+}
+
+#staked::-webkit-scrollbar
+{
+  width: 6px;
+	background-color: #F5F5F5;
+  border-radius: 10px;
+}
+
+#staked::-webkit-scrollbar-thumb
+{
+  background-color: #FFF;
+  border-radius: 10px;
+}
+
+body:has(#mob_menu) {
+  overflow-y: hidden;
+}
+
+* {
+  cursor: url('./assets/images/Mouse_icon_open.png'), default;
+}
+
+a, a * {
+  cursor: url('./assets/images/Mouse_icon_open.png'), default;
+}
+
+button, button * {
+  cursor: url('./assets/images/Mouse_icon_open.png'), default;
+}
+
+.cursor-pointer {
+  cursor: url('./assets/images/Mouse_icon_open.png'), default;
+}
+
+*:active {
+  cursor: url('./assets/images/Mouse_icon_click.png'), pointer;
+}
+
+.cursor-pointer:active {
+  cursor: url('./assets/images/Mouse_icon_click.png'), pointer;
+}
